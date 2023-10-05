@@ -1,0 +1,12 @@
+tensorflow
+keras
+pandas
+numpy
+jupyter
+notebook
+tqdm
+opencv-contrib-python
+scikit-learn
+
+Dataset :
+https://www.kaggle.com/datasets/jonathanoheix/face-expression-recognition-dataset

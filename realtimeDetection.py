@@ -17,19 +17,8 @@ def extract_features(image):
     return feature/255.0
 
 webcam=cv2.VideoCapture(0)
-with open('mapping.csv', 'r') as csvfile:
-    csvtext = csvfile.readlines()
-mylist = []
-for line in csvtext:
-    mylist.append(str(line.strip().split(', ')))
-angry = random.choice(mylist[1:16])
-disgust = random.choice(mylist[16:31])
-fear = random.choice(mylist[31:46])
-happy = random.choice(mylist[46:61])
-neutral = random.choice(mylist[61:76])
-sad = random.choice(mylist[76:91])
-surprise = random.choice(mylist[91:106])
-labels = {0 : angry, 1 : disgust, 2 : fear, 3 : happy, 4 : neutral, 5 : sad, 6 : surprise}
+
+labels = {0 : "Angry", 1 : "Disgust", 2 : "Fear", 3 : "Happy", 4 : "Neutral", 5 : "Sad", 6 : "Surprised"}
 while True:
     i,im=webcam.read()
     gray=cv2.cvtColor(im,cv2.COLOR_BGR2GRAY)
